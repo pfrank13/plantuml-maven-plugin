@@ -4,7 +4,7 @@
 
   <groupId>com.github.jmdesprez</groupId>
   <artifactId>plantuml-maven-plugin</artifactId>
-  <version>1.2</version>
+  <version>1.2-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Maven PlantUML plugin</name>
