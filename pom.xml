@@ -61,10 +61,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:https://git@github.com:jmdesprez/maven-plantuml-plugin</connection>
-    <developerConnection>scm:git:https://git@github.com:jmdesprez/maven-plantuml-plugin</developerConnection>
-    <url>scm:git:https://git@github.com:jmdesprez/maven-plantuml-plugin</url>
-    <tag>plantuml-maven-plugin-1.2</tag>
+    <connection>scm:git:https://git@github.com/jmdesprez/maven-plantuml-plugin</connection>
+    <developerConnection>scm:git:https://git@github.com/jmdesprez/maven-plantuml-plugin</developerConnection>
+    <url>scm:git:https://git@github.com/jmdesprez/maven-plantuml-plugin</url>
   </scm>
 
   <build>
