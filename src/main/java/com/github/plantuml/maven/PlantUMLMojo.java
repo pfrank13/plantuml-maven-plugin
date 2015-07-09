@@ -43,6 +43,9 @@ public final class PlantUMLMojo extends AbstractMojo {
 
 	/**
 	 * Truncate the ouput folder.
+	 *
+	 * @parameter property="truncatePattern"
+	 * @since 1.2
 	 */
 	private String truncatePattern;
 
