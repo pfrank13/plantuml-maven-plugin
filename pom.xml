@@ -4,7 +4,7 @@
 
   <groupId>com.github.jmdesprez</groupId>
   <artifactId>plantuml-maven-plugin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
   <packaging>maven-plugin</packaging>
 
   <name>Maven PlantUML plugin</name>
@@ -15,7 +15,7 @@
 
   <properties>
     <java.version>1.6</java.version>
-    <javaAnimalSniffer.version>17</javaAnimalSniffer.version>
+    <javaAnimalSniffer.version>16</javaAnimalSniffer.version>
   </properties>
 
   <dependencies>
@@ -43,6 +43,10 @@
 
   <developers>
     <developer>
+      <id>jmdesprez</id>
+      <name>Jean-Marc Desprez</name>
+    </developer>
+    <developer>
       <id>jeluard</id>
       <name>Julien Eluard</name>
     </developer>
@@ -57,17 +61,17 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:jeluard/maven-plantuml-plugin</connection>
-    <developerConnection>scm:git:git@github.com:jeluard/maven-plantuml-plugin</developerConnection>
-    <url>scm:git:git@github.com:jeluard/maven-plantuml-plugin</url>
-    <tag>HEAD</tag>
+    <connection>scm:git:git@github.com:jmdesprez/maven-plantuml-plugin</connection>
+    <developerConnection>scm:git:git@github.com:jmdesprez/maven-plantuml-plugin</developerConnection>
+    <url>scm:git:git@github.com:jmdesprez/maven-plantuml-plugin</url>
+    <tag>plantuml-maven-plugin-1.2</tag>
   </scm>
 
   <build>
     <plugins>
       <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.1</version>
+          <version>3.2</version>
           <configuration>
             <source>${java.version}</source>
             <target>${java.version}</target>
@@ -115,7 +119,7 @@
     								</goals>
     							</pluginExecutionFilter>
     							<action>
-    								<ignore></ignore>
+    								<ignore />
     							</action>
     						</pluginExecution>
     					</pluginExecutions>
