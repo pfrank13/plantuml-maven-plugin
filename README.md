@@ -1,5 +1,4 @@
 
-
 A [maven](http://maven.apache.org/) plugin to generate UML diagrams using [PlantUML](http://plantuml.sourceforge.net/) syntax.
 
 # Usage
