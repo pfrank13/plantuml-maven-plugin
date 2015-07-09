@@ -4,7 +4,7 @@
 
   <groupId>com.github.jmdesprez</groupId>
   <artifactId>plantuml-maven-plugin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
   <packaging>maven-plugin</packaging>
 
   <name>Maven PlantUML plugin</name>
@@ -61,9 +61,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:jmdesprez/maven-plantuml-plugin</connection>
-    <developerConnection>scm:git:git@github.com:jmdesprez/maven-plantuml-plugin</developerConnection>
-    <url>scm:git:git@github.com:jmdesprez/maven-plantuml-plugin</url>
+    <connection>scm:git:https://git@github.com:jmdesprez/maven-plantuml-plugin</connection>
+    <developerConnection>scm:git:https://git@github.com:jmdesprez/maven-plantuml-plugin</developerConnection>
+    <url>scm:git:https://git@github.com:jmdesprez/maven-plantuml-plugin</url>
     <tag>plantuml-maven-plugin-1.2</tag>
   </scm>
 
