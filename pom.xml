@@ -4,7 +4,7 @@
 
   <groupId>com.github.jmdesprez</groupId>
   <artifactId>plantuml-maven-plugin</artifactId>
-  <version>1.2</version>
+  <version>1.3-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Maven PlantUML plugin</name>
@@ -14,7 +14,7 @@
   </description>
 
   <properties>
-    <java.version>1.6</java.version>
+    <java.version>1.7</java.version>
     <javaAnimalSniffer.version>16</javaAnimalSniffer.version>
   </properties>
 
@@ -22,7 +22,7 @@
     <dependency>
       <groupId>net.sourceforge.plantuml</groupId>
       <artifactId>plantuml</artifactId>
-      <version>7999</version>
+      <version>8025</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
