@@ -11,12 +11,13 @@ To generate images from PlantUML description add following dependency to your po
 <build>
   <plugins>
     <plugin>
-      <groupId>com.github.jeluard</groupId>
-      <artifactId>plantuml-maven-plugin</artifactId>
-      <version>1.1</version>
+      <groupId>com.github.jmdesprez</groupId>
+	  <artifactId>plantuml-maven-plugin</artifactId>
+	  <version>1.3</version>
       <configuration>
         <sourceFiles>
           <directory>${basedir}</directory>
+          <truncatePattern>src/main/*</truncatePattern>
           <includes>
             <include>src/main/plantuml/**/*.txt</include>
           </includes>
