@@ -37,7 +37,7 @@ import org.codehaus.plexus.util.FileUtils;
  * @phase generate-resources
  * @goal generate
  */
-public final class PlantUMLMojoOld extends AbstractMojo {
+public final class PlantUmlMojo extends AbstractMojo {
 
 	private final Option option = new Option();
 
