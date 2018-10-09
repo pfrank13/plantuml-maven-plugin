@@ -21,6 +21,7 @@ import java.nio.file.Path;
 import java.util.Iterator;
 import java.util.List;
 import net.sourceforge.plantuml.FileFormat;
+import net.sourceforge.plantuml.FileFormatOption;
 import net.sourceforge.plantuml.GeneratedImage;
 import net.sourceforge.plantuml.Option;
 import net.sourceforge.plantuml.OptionFlags;
@@ -117,25 +118,25 @@ public final class PlantUmlMojo extends AbstractMojo {
 
     protected final void setFormat(final String format) {
         if ("xmi".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.XMI_STANDARD);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.XMI_STANDARD));
         } else if ("xmi:argo".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.XMI_ARGO);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.XMI_ARGO));
         } else if ("xmi:start".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.XMI_STAR);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.XMI_STAR));
         } else if ("eps".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.EPS);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.EPS));
         } else if ("eps:txt".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.EPS_TEXT);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.EPS_TEXT));
         } else if ("svg".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.SVG);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.SVG));
         } else if ("txt".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.ATXT);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.ATXT));
         } else if ("utxt".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.UTXT);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.UTXT));
         } else if ("png".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.PNG);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.PNG));
         } else if ("pdf".equalsIgnoreCase(format)) {
-            this.option.setFileFormat(FileFormat.PDF);
+            this.option.setFileFormatOption(new FileFormatOption(FileFormat.PDF));
         } else {
             throw new IllegalArgumentException("Unrecognized format <" + format + ">");
         }
@@ -179,9 +180,9 @@ public final class PlantUmlMojo extends AbstractMojo {
             if (this.config != null) {
                 this.option.initConfig(this.config);
             }
-            if (this.keepTmpFiles) {
-                OptionFlags.getInstance().setKeepTmpFiles(this.keepTmpFiles);
-            }
+            //			if (this.keepTmpFiles) {
+            //				OptionFlags.getInstance().setKeepTmpFiles(this.keepTmpFiles);
+            //			}
             if (this.graphvizDot != null) {
                 OptionFlags.getInstance().setDotExecutable(this.graphvizDot);
             }
@@ -192,8 +193,7 @@ public final class PlantUmlMojo extends AbstractMojo {
                 OptionFlags.getInstance().setVerbose(true);
             }
 
-            final List<File> files = FileUtils.getFiles(baseDir, getCommaSeparatedList(this.sourceFiles.getIncludes()),
-                    getCommaSeparatedList(this.sourceFiles.getExcludes()));
+            final List<File> files = FileUtils.getFiles(baseDir, getCommaSeparatedList(this.sourceFiles.getIncludes()), getCommaSeparatedList(this.sourceFiles.getExcludes()));
             for (final File file : files) {
                 getLog().info("Processing file <" + file + ">");
 
@@ -211,8 +211,7 @@ public final class PlantUmlMojo extends AbstractMojo {
                             endIndex++;
                             String currentTruncateToken = truncateTokens[truncateIndex];
 
-                            if ("*".equals(currentTruncateToken) || path.getFileName().toString()
-                                    .equals(currentTruncateToken)) {
+                            if ("*".equals(currentTruncateToken) || path.getFileName().toString().equals(currentTruncateToken)) {
                                 truncateIndex++;
                                 if (truncateIndex == truncateTokens.length) {
                                     // All tokens are found
@@ -239,9 +238,9 @@ public final class PlantUmlMojo extends AbstractMojo {
                     this.option.setOutputDir(outputDir);
                 }
 
-                final SourceFileReader sourceFileReader =
-                        new SourceFileReader(new Defines(), file, this.option.getOutputDir(), this.option.getConfig(),
-                                this.option.getCharset(), this.option.getFileFormatOption());
+                final SourceFileReader sourceFileReader = new SourceFileReader(new Defines(), file,
+                        this.option.getOutputDir(), this.option.getConfig(), this.option.getCharset(),
+                        this.option.getFileFormatOption());
                 for (final GeneratedImage image : sourceFileReader.getGeneratedImages()) {
                     getLog().debug(image + " " + image.getDescription());
                 }
