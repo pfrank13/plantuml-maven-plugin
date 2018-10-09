@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.jmdesprez</groupId>
+    <groupId>cz.alry</groupId>
     <artifactId>plantuml-maven-plugin</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4.0-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <name>Maven PlantUML plugin</name>
@@ -44,6 +44,10 @@
 
     <developers>
         <developer>
+            <id>AlesRybak</id>
+            <name>Ales Rybak</name>
+        </developer>
+        <developer>
             <id>jmdesprez</id>
             <name>Jean-Marc Desprez</name>
         </developer>
@@ -62,9 +66,9 @@
     </developers>
 
     <scm>
-        <url>scm:git:https://github.com/jmdesprez/plantuml-maven-plugin</url>
-        <connection>scm:git:git@github.com:jmdesprez/maven-plantuml-plugin</connection>
-        <developerConnection>scm:git:git@github.com:jmdesprez/plantuml-maven-plugin.git</developerConnection>
+        <url>scm:git:https://github.com/AlesRybak/plantuml-maven-plugin</url>
+        <connection>scm:git:git@github.com:AlesRybak/maven-plantuml-plugin</connection>
+        <developerConnection>scm:git:git@github.com:AlesRybak/plantuml-maven-plugin.git</developerConnection>
     </scm>
 
     <build>
