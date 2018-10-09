@@ -5,7 +5,7 @@
 
     <groupId>cz.alry</groupId>
     <artifactId>plantuml-maven-plugin</artifactId>
-    <version>1.4.0</version>
+    <version>1.5.0</version>
     <packaging>maven-plugin</packaging>
 
     <name>Maven PlantUML plugin</name>
@@ -13,6 +13,15 @@
     <description>
         A maven plugin to generate UML diagrams using PlantUML syntax
     </description>
+
+    <url>https://github.com/AlesRybak/plantump-maven-plugin</url>
+
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
