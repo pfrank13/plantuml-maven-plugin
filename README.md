@@ -1,19 +1,18 @@
 
-A [maven](http://maven.apache.org/) plugin to generate UML diagrams using [PlantUML](http://plantuml.sourceforge.net/) syntax.
-[ ![Download](https://api.bintray.com/packages/jmdesprez/maven/plantuml-maven-plugin/images/download.svg) ](https://bintray.com/jmdesprez/maven/plantuml-maven-plugin/_latestVersion)
+A [Maven](https://maven.apache.org/) plugin to generate UML diagrams using [PlantUML](https://plantuml.sourceforge.net/) syntax. Artifacts are available from [Maven Central Repository](https://search.maven.org/search?q=g:cz.alry%20a:plantuml-maven-plugin)
 
 # Usage
 
-To generate images from PlantUML description add following dependency to your pom.xml:
+To generate images from PlantUML description add following dependency to your _pom.xml_:
 
 ```xml
 ...
 <build>
   <plugins>
     <plugin>
-      <groupId>com.github.jmdesprez</groupId>
-	  <artifactId>plantuml-maven-plugin</artifactId>
-	  <version>1.3</version>
+      <groupId>cz.alry</groupId>
+      <artifactId>plantuml-maven-plugin</artifactId>
+      <version>1.5</version>
       <configuration>
         <sourceFiles>
           <directory>${basedir}</directory>
@@ -27,7 +26,7 @@ To generate images from PlantUML description add following dependency to your po
         <dependency>
           <groupId>net.sourceforge.plantuml</groupId>
           <artifactId>plantuml</artifactId>
-          <version>7999</version>
+          <version>1.2018.11</version>
         </dependency>
       </dependencies>
     </plugin>
@@ -40,7 +39,7 @@ Note that you must explicitely define the PlantUML version you want to use.
 Then execute command:
 
 ```
-mvn clean com.github.jmdesprez:plantuml-maven-plugin:generate
+mvn clean cz.alry:plantuml-maven-plugin:generate
 ```
 
 # Extra configuration options
