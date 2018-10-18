@@ -1,5 +1,5 @@
 
-A [Maven](https://maven.apache.org/) plugin to generate UML diagrams using [PlantUML](https://plantuml.sourceforge.net/) syntax. Artifacts are available from [Maven Central Repository](https://search.maven.org/search?q=g:cz.alry%20a:plantuml-maven-plugin)
+A [Maven](https://maven.apache.org/) plugin to generate UML diagrams using [PlantUML](https://plantuml.com/) syntax. Artifacts are available from [Maven Central Repository](https://search.maven.org/search?q=g:cz.alry%20a:plantuml-maven-plugin)
 
 # Usage
 
