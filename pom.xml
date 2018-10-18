@@ -14,7 +14,7 @@
         A maven plugin to generate UML diagrams using PlantUML syntax
     </description>
 
-    <url>https://github.com/AlesRybak/plantump-maven-plugin</url>
+    <url>https://github.com/AlesRybak/plantuml-maven-plugin</url>
 
     <licenses>
         <license>
